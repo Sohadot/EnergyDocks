@@ -1,208 +1,1056 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" class="no-js">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Energydocks.com — where mobile systems connect to energy</title>
-<meta name="description" content="Energydocks.com. The interface where ships, fleets and autonomous machines connect to energy, transfer it, and return to service. Domain available for acquisition.">
-<link rel="canonical" href="https://energydocks.com/">
-<meta property="og:title" content="Energydocks.com">
-<meta property="og:description" content="The interface where ships, fleets and autonomous machines connect to energy, transfer it, and return to service.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://energydocks.com/">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Energydocks.com",
-  "url": "https://energydocks.com/",
-  "description": "The interface where ships, fleets and autonomous machines connect to energy, transfer it, and return to service.",
-  "publisher": { "@type": "Organization", "name": "Sohadot", "email": "agent@sohadot.com" }
-}
-</script>
-<style>
-  :root{
-    --deep:#0D2426;
-    --deep-2:#12302F;
-    --pale:#E8EFEC;
-    --muted:#93A9A6;
-    --steel:#2F4B4C;
-    --amber:#E0A03C;
-    --measure:34rem;
-  }
-  *{box-sizing:border-box}
-  html{-webkit-text-size-adjust:100%}
-  body{
-    margin:0;
-    background:var(--deep);
-    color:var(--pale);
-    font-family:"Archivo","Helvetica Neue",Arial,sans-serif;
-    font-size:17px;
-    line-height:1.6;
-    -webkit-font-smoothing:antialiased;
-  }
-  .wrap{
-    max-width:60rem;
-    margin:0 auto;
-    padding:clamp(2rem,7vw,5rem) clamp(1.25rem,5vw,3.5rem) 3rem;
-  }
-  .mark{
-    font-size:.95rem;
-    font-weight:600;
-    letter-spacing:.01em;
-    color:var(--muted);
-    margin:0 0 clamp(3rem,10vw,6rem);
-  }
-  .mark b{color:var(--pale);font-weight:600}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EnergyDocks.com — Where moving systems connect to energy</title>
+  <meta name="description" content="EnergyDocks.com names the infrastructure where ships, fleets and autonomous machines connect to energy, transfer power and return to operation. Available for acquisition.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#071b1d">
+  <link rel="canonical" href="https://energydocks.com/">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 
-  h1{
-    font-size:clamp(2.1rem,7vw,4.1rem);
-    font-weight:700;
-    line-height:1.04;
-    letter-spacing:-.025em;
-    margin:0;
-    max-width:20ch;
-  }
-  .lede{
-    margin:1.75rem 0 0;
-    max-width:var(--measure);
-    font-size:clamp(1.05rem,2.4vw,1.2rem);
-    color:#C7D6D2;
-  }
+  <meta property="og:title" content="EnergyDocks.com — A name for the infrastructure layer">
+  <meta property="og:description" content="Where ships, fleets and autonomous machines connect to energy, establish identity, transfer power and return to operation.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://energydocks.com/">
+  <meta property="og:image" content="https://energydocks.com/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="EnergyDocks.com — the point where moving systems connect to energy">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="EnergyDocks.com — A name for the infrastructure layer">
+  <meta name="twitter:description" content="The interface where mobile systems connect to energy, transfer power and return to operation.">
+  <meta name="twitter:image" content="https://energydocks.com/assets/og-image.png">
 
-  /* berth diagram */
-  .berth{
-    margin:clamp(3rem,9vw,5.5rem) 0 0;
-    width:100%;
-    height:auto;
-    max-width:44rem;
-    display:block;
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "EnergyDocks.com",
+    "url": "https://energydocks.com/",
+    "description": "A conceptual and commercial surface for the infrastructure where mobile systems connect to energy.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Sohadot",
+      "email": "agent@sohadot.com"
+    }
   }
-  .quay{stroke:var(--steel);stroke-width:2}
-  .hull{fill:none;stroke:var(--muted);stroke-width:2;rx:3}
-  .hull-live{stroke:var(--pale)}
-  .stem{stroke:var(--steel);stroke-width:2}
-  .stem-live{stroke:var(--amber);stroke-width:3}
-  .flow{
-    stroke:var(--amber);stroke-width:3;
-    stroke-dasharray:6 14;
-    animation:pulse 2.4s linear infinite;
-  }
-  @keyframes pulse{to{stroke-dashoffset:-40}}
-  @media (prefers-reduced-motion:reduce){.flow{animation:none}}
-  .cap{fill:var(--muted);font-size:11px;font-family:inherit;letter-spacing:.02em}
+  </script>
 
-  section{margin-top:clamp(3.5rem,10vw,6rem)}
-  h2{
-    font-size:1.05rem;
-    font-weight:600;
-    margin:0 0 1.5rem;
-    color:var(--muted);
-  }
-  p{max-width:var(--measure)}
+  <style>
+    :root {
+      color-scheme: dark;
+      --ink: #071b1d;
+      --ink-soft: #0b2426;
+      --ink-raised: #102e30;
+      --paper: #e9f0ec;
+      --paper-soft: #c2cfca;
+      --muted: #8ca19d;
+      --steel: #365356;
+      --steel-bright: #66807d;
+      --energy: #e4a13b;
+      --energy-pale: #f0c16f;
+      --page: 94rem;
+      --gutter: clamp(1.25rem, 4vw, 4rem);
+      --line: 1px;
+      --ease: cubic-bezier(.22, 1, .36, 1);
+    }
 
-  .sectors{list-style:none;margin:0;padding:0}
-  .sectors li{
-    padding:1.15rem 0;
-    border-top:1px solid var(--steel);
-    display:grid;
-    grid-template-columns:9.5rem 1fr;
-    gap:.35rem 1.5rem;
-    align-items:baseline;
-  }
-  .sectors li:last-child{border-bottom:1px solid var(--steel)}
-  .sectors dt,.sectors .name{font-weight:600}
-  .sectors .desc{color:var(--muted);max-width:38ch}
-  @media (max-width:34rem){
-    .sectors li{grid-template-columns:1fr}
-  }
+    * { box-sizing: border-box; }
 
-  .close{
-    margin-top:clamp(3.5rem,10vw,6rem);
-    padding-top:2rem;
-    border-top:1px solid var(--steel);
-  }
-  .close p{color:var(--muted)}
-  a{color:var(--amber);text-decoration:none;border-bottom:1px solid rgba(224,160,60,.4);padding-bottom:1px}
-  a:hover{border-bottom-color:var(--amber)}
-  a:focus-visible{outline:2px solid var(--amber);outline-offset:3px;border-radius:2px}
-  .contact{margin-top:.75rem;font-size:1.15rem;font-weight:500;color:var(--pale)}
-  footer{margin-top:3rem;font-size:.85rem;color:#6E8482}
-</style>
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+      background: var(--ink);
+    }
+
+    body {
+      margin: 0;
+      overflow-x: hidden;
+      background:
+        linear-gradient(90deg, transparent calc(50% - .5px), rgba(102,128,125,.08) 50%, transparent calc(50% + .5px)),
+        var(--ink);
+      color: var(--paper);
+      font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    a { color: inherit; }
+
+    button,
+    a { -webkit-tap-highlight-color: transparent; }
+
+    :focus-visible {
+      outline: 2px solid var(--energy);
+      outline-offset: 5px;
+    }
+
+    ::selection {
+      background: var(--energy);
+      color: var(--ink);
+    }
+
+    .skip-link {
+      position: fixed;
+      top: 1rem;
+      left: 1rem;
+      z-index: 100;
+      padding: .75rem 1rem;
+      transform: translateY(-180%);
+      background: var(--paper);
+      color: var(--ink);
+      text-decoration: none;
+      font-weight: 700;
+      transition: transform .2s ease;
+    }
+
+    .skip-link:focus { transform: translateY(0); }
+
+    .shell {
+      width: min(100%, var(--page));
+      margin-inline: auto;
+      padding-inline: var(--gutter);
+    }
+
+    .site-header {
+      position: absolute;
+      inset: 0 0 auto;
+      z-index: 10;
+    }
+
+    .site-header__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 6.5rem;
+      border-bottom: var(--line) solid rgba(102,128,125,.32);
+    }
+
+    .wordmark {
+      color: var(--paper);
+      font-size: clamp(1.05rem, 1.5vw, 1.35rem);
+      font-weight: 650;
+      letter-spacing: -.035em;
+      text-decoration: none;
+    }
+
+    .wordmark span { color: var(--muted); }
+
+    .header-action {
+      display: inline-flex;
+      align-items: center;
+      gap: .75rem;
+      color: var(--paper-soft);
+      font-size: .82rem;
+      font-weight: 600;
+      letter-spacing: .035em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .header-action::before {
+      width: .45rem;
+      height: .45rem;
+      border-radius: 50%;
+      background: var(--energy);
+      box-shadow: 0 0 0 .28rem rgba(228,161,59,.09);
+      content: "";
+      transition: box-shadow .25s ease;
+    }
+
+    .header-action:hover::before { box-shadow: 0 0 0 .42rem rgba(228,161,59,.14); }
+
+    .hero {
+      position: relative;
+      display: grid;
+      min-height: 100svh;
+      padding-top: 8.5rem;
+      border-bottom: var(--line) solid rgba(102,128,125,.45);
+      isolation: isolate;
+    }
+
+    .hero::before {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background:
+        linear-gradient(90deg, rgba(102,128,125,.08) 1px, transparent 1px) 0 0 / 12.5% 100%,
+        linear-gradient(rgba(102,128,125,.06) 1px, transparent 1px) 0 0 / 100% 8rem;
+      -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,.72), transparent 88%);
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,.72), transparent 88%);
+      content: "";
+      pointer-events: none;
+    }
+
+    .hero__inner {
+      display: grid;
+      grid-template-columns: minmax(0, .78fr) minmax(32rem, 1.22fr);
+      gap: clamp(2rem, 4vw, 5rem);
+      align-items: center;
+      padding-block: clamp(2.5rem, 5vh, 5rem) 2rem;
+    }
+
+    .hero__copy { align-self: center; }
+
+    h1,
+    h2,
+    h3,
+    p { margin-top: 0; }
+
+    h1 {
+      max-width: 12ch;
+      margin-bottom: clamp(1.75rem, 4vh, 3rem);
+      font-size: clamp(3.15rem, 5.6vw, 6.35rem);
+      font-weight: 500;
+      letter-spacing: -.062em;
+      line-height: .98;
+      text-wrap: balance;
+    }
+
+    .hero__lede {
+      max-width: 34rem;
+      margin-bottom: 0;
+      color: var(--paper-soft);
+      font-size: clamp(1.05rem, 1.4vw, 1.28rem);
+      line-height: 1.58;
+    }
+
+    .hero__lede strong {
+      color: var(--paper);
+      font-weight: 540;
+    }
+
+    .hero__visual {
+      position: relative;
+      min-width: 0;
+      padding-top: 2rem;
+    }
+
+    .phase-labels {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0;
+      margin: 0 0 .75rem;
+      padding: 0;
+      color: var(--muted);
+      font-size: clamp(.6rem, .7vw, .72rem);
+      font-weight: 650;
+      letter-spacing: .09em;
+      list-style: none;
+      text-transform: uppercase;
+    }
+
+    .phase-labels li {
+      position: relative;
+      padding-left: .65rem;
+      border-left: var(--line) solid rgba(102,128,125,.34);
+    }
+
+    .phase-labels li:nth-child(4) { color: var(--energy-pale); }
+
+    .dock-figure {
+      position: relative;
+      margin: 0;
+    }
+
+    .dock-figure svg {
+      display: block;
+      width: 100%;
+      height: auto;
+      overflow: visible;
+    }
+
+    .schematic-line {
+      fill: none;
+      stroke: var(--steel-bright);
+      stroke-linecap: square;
+      stroke-linejoin: miter;
+      vector-effect: non-scaling-stroke;
+    }
+
+    .schematic-faint { opacity: .34; }
+    .schematic-mid { opacity: .62; }
+
+    .datum {
+      fill: none;
+      stroke: rgba(140,161,157,.3);
+      stroke-dasharray: 2 8;
+      vector-effect: non-scaling-stroke;
+    }
+
+    .energy-path {
+      fill: none;
+      stroke: var(--energy);
+      stroke-linecap: round;
+      stroke-width: 2.2;
+      vector-effect: non-scaling-stroke;
+    }
+
+    .energy-pulse {
+      fill: none;
+      stroke: var(--energy-pale);
+      stroke-dasharray: 2 15;
+      stroke-linecap: round;
+      stroke-width: 4;
+      animation: energy-flow 2.4s linear infinite;
+      vector-effect: non-scaling-stroke;
+    }
+
+    .target-corner {
+      fill: none;
+      stroke: var(--paper-soft);
+      stroke-width: 1.15;
+      vector-effect: non-scaling-stroke;
+    }
+
+    .dock-figure figcaption {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-top: .7rem;
+      color: var(--muted);
+      font-size: .7rem;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .dock-figure figcaption span:last-child { color: var(--energy-pale); }
+
+    .definition {
+      align-self: end;
+      display: grid;
+      grid-template-columns: minmax(12rem, .78fr) minmax(0, 1.22fr);
+      gap: clamp(2rem, 4vw, 5rem);
+      padding-block: clamp(1.6rem, 3vh, 2.5rem);
+      border-top: var(--line) solid rgba(102,128,125,.34);
+    }
+
+    .definition__label,
+    .section-index {
+      color: var(--energy-pale);
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .definition p {
+      max-width: 56rem;
+      margin-bottom: 0;
+      color: var(--paper-soft);
+      font-size: clamp(1rem, 1.25vw, 1.2rem);
+    }
+
+    .definition strong { color: var(--paper); font-weight: 580; }
+
+    .section {
+      position: relative;
+      padding-block: clamp(5rem, 10vw, 10rem);
+      border-bottom: var(--line) solid rgba(102,128,125,.45);
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(12rem, .42fr) minmax(0, 1.58fr);
+      gap: clamp(2rem, 4vw, 5rem);
+      margin-bottom: clamp(3rem, 7vw, 6.5rem);
+    }
+
+    .section-head h2 {
+      max-width: 18ch;
+      margin-bottom: 0;
+      font-size: clamp(2.7rem, 5.5vw, 6.2rem);
+      font-weight: 520;
+      letter-spacing: -.058em;
+      line-height: .98;
+    }
+
+    .section-head__intro {
+      align-self: end;
+      max-width: 36rem;
+      margin-bottom: .35rem;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .worlds {
+      margin: 0;
+      padding: 0;
+      border-top: var(--line) solid var(--steel);
+      list-style: none;
+    }
+
+    .world {
+      position: relative;
+      display: grid;
+      grid-template-columns: 5rem minmax(10rem, .62fr) minmax(18rem, 1.38fr) auto;
+      gap: clamp(1rem, 3vw, 3.5rem);
+      align-items: center;
+      min-height: 9rem;
+      border-bottom: var(--line) solid var(--steel);
+      transition: background-color .4s var(--ease), padding-inline .4s var(--ease);
+    }
+
+    .world::before {
+      position: absolute;
+      inset: 0 auto 0 calc(var(--gutter) * -1);
+      width: .22rem;
+      transform: scaleY(0);
+      transform-origin: center;
+      background: var(--energy);
+      content: "";
+      transition: transform .4s var(--ease);
+    }
+
+    .world:hover,
+    .world:focus-within {
+      padding-inline: 1rem;
+      background: rgba(16,46,48,.45);
+    }
+
+    .world:hover::before,
+    .world:focus-within::before { transform: scaleY(1); }
+
+    .world__number {
+      color: var(--energy-pale);
+      font-size: .73rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+    }
+
+    .world h3 {
+      margin-bottom: 0;
+      font-size: clamp(1.85rem, 3vw, 3.2rem);
+      font-weight: 560;
+      letter-spacing: -.04em;
+    }
+
+    .world p {
+      max-width: 42rem;
+      margin-bottom: 0;
+      color: var(--paper-soft);
+      font-size: clamp(.98rem, 1.2vw, 1.1rem);
+    }
+
+    .world__signal {
+      display: flex;
+      align-items: center;
+      width: clamp(5rem, 8vw, 8.5rem);
+      height: 1rem;
+    }
+
+    .world__signal::before {
+      flex: 1;
+      height: 1px;
+      background: var(--steel-bright);
+      content: "";
+    }
+
+    .world__signal::after {
+      width: .52rem;
+      height: .52rem;
+      border: 1px solid var(--steel-bright);
+      transform: rotate(45deg);
+      content: "";
+      transition: border-color .35s ease, background-color .35s ease;
+    }
+
+    .world:hover .world__signal::after,
+    .world:focus-within .world__signal::after {
+      border-color: var(--energy);
+      background: var(--energy);
+    }
+
+    .sequence-section {
+      overflow: hidden;
+      background: var(--ink-soft);
+    }
+
+    .sequence {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .stage {
+      position: relative;
+      min-height: 20rem;
+      padding: 0 clamp(1rem, 2.6vw, 2.5rem) 2rem;
+      border-left: var(--line) solid rgba(102,128,125,.35);
+    }
+
+    .stage:last-child { border-right: var(--line) solid rgba(102,128,125,.35); }
+
+    .stage::before {
+      position: absolute;
+      top: 6.85rem;
+      right: 0;
+      left: 0;
+      height: 1px;
+      background: var(--steel-bright);
+      content: "";
+    }
+
+    .stage::after {
+      position: absolute;
+      top: 6.46rem;
+      left: clamp(1rem, 2.6vw, 2.5rem);
+      width: .72rem;
+      height: .72rem;
+      border: 2px solid var(--steel-bright);
+      border-radius: 50%;
+      background: var(--ink-soft);
+      content: "";
+      transition: border-color .3s ease, box-shadow .3s ease, background-color .3s ease;
+    }
+
+    .stage:hover::after {
+      border-color: var(--energy);
+      background: var(--energy);
+      box-shadow: 0 0 0 .4rem rgba(228,161,59,.1);
+    }
+
+    .stage__number {
+      display: block;
+      margin-bottom: 1.35rem;
+      color: var(--energy-pale);
+      font-size: .8rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+    }
+
+    .stage h3 {
+      margin-bottom: 5.3rem;
+      font-size: clamp(1.15rem, 1.8vw, 1.65rem);
+      font-weight: 570;
+      letter-spacing: -.025em;
+    }
+
+    .stage p {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: .9rem;
+      line-height: 1.6;
+    }
+
+    .stage--live::before {
+      background: var(--energy);
+    }
+
+    .stage--live::after {
+      border-color: var(--energy);
+      background: var(--energy);
+      box-shadow: 0 0 0 .4rem rgba(228,161,59,.1);
+    }
+
+    .acquisition {
+      padding-block: clamp(5rem, 11vw, 10rem) 0;
+      background: var(--ink);
+    }
+
+    .acquisition__grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(18rem, .8fr);
+      gap: clamp(3rem, 8vw, 9rem);
+      padding-bottom: clamp(5rem, 9vw, 8rem);
+    }
+
+    .acquisition h2 {
+      max-width: 12ch;
+      margin: 1.5rem 0 2.5rem;
+      font-size: clamp(3.2rem, 6.6vw, 7.6rem);
+      font-weight: 520;
+      letter-spacing: -.065em;
+      line-height: .93;
+    }
+
+    .acquisition__thesis {
+      max-width: 39rem;
+      margin-bottom: 0;
+      color: var(--paper-soft);
+      font-size: clamp(1.05rem, 1.45vw, 1.28rem);
+    }
+
+    .acquisition__panel {
+      align-self: end;
+      padding: clamp(1.5rem, 3vw, 2.5rem);
+      border: var(--line) solid var(--steel-bright);
+      background: var(--ink-soft);
+    }
+
+    .acquisition__status {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      margin-bottom: 2.5rem;
+      color: var(--muted);
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    .acquisition__status::before {
+      width: .48rem;
+      height: .48rem;
+      border-radius: 50%;
+      background: var(--energy);
+      content: "";
+    }
+
+    .acquisition__panel h3 {
+      max-width: 17ch;
+      margin-bottom: 1rem;
+      font-size: clamp(1.6rem, 2.7vw, 2.45rem);
+      font-weight: 550;
+      letter-spacing: -.045em;
+      line-height: 1.08;
+    }
+
+    .acquisition__panel p {
+      margin-bottom: 2rem;
+      color: var(--muted);
+    }
+
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      width: 100%;
+      min-height: 4rem;
+      padding: 1rem 1.2rem;
+      border: var(--line) solid var(--energy);
+      color: var(--energy-pale);
+      font-size: .9rem;
+      font-weight: 700;
+      letter-spacing: .035em;
+      text-decoration: none;
+      transition: background-color .25s ease, color .25s ease;
+    }
+
+    .cta svg {
+      width: 1.2rem;
+      height: 1.2rem;
+      transition: transform .3s var(--ease);
+    }
+
+    .cta:hover {
+      background: var(--energy);
+      color: var(--ink);
+    }
+
+    .cta:hover svg { transform: translate(3px, -3px); }
+
+    .direct-email {
+      display: inline-block;
+      margin-top: 1.2rem;
+      color: var(--paper-soft);
+      font-size: .88rem;
+      text-decoration-color: var(--steel-bright);
+      text-underline-offset: .3rem;
+    }
+
+    .site-footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+      padding-block: 2rem 2.5rem;
+      border-top: var(--line) solid var(--steel);
+      color: var(--muted);
+      font-size: .78rem;
+    }
+
+    .site-footer p { margin: 0; }
+
+    .site-footer a {
+      text-decoration-color: var(--steel-bright);
+      text-underline-offset: .25rem;
+    }
+
+    .no-js [data-reveal] { opacity: 1; transform: none; }
+
+    .js [data-reveal] {
+      opacity: 0;
+      transform: translateY(1.4rem);
+      transition: opacity .85s var(--ease), transform .85s var(--ease);
+    }
+
+    .js [data-reveal].is-visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    @keyframes energy-flow {
+      to { stroke-dashoffset: -68; }
+    }
+
+    @media (max-width: 67rem) {
+      .hero { min-height: auto; }
+
+      .hero__inner {
+        grid-template-columns: 1fr;
+        padding-top: 4.5rem;
+      }
+
+      .hero__copy { max-width: 48rem; }
+      h1 { max-width: 13ch; }
+      .hero__visual { width: min(100%, 55rem); }
+
+      .definition,
+      .section-head {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .world {
+        grid-template-columns: 3rem minmax(9rem, .62fr) minmax(16rem, 1.38fr);
+      }
+
+      .world__signal { display: none; }
+
+      .sequence {
+        grid-template-columns: 1fr;
+        border-top: var(--line) solid var(--steel);
+      }
+
+      .stage,
+      .stage:last-child {
+        display: grid;
+        grid-template-columns: 3rem minmax(8rem, .5fr) minmax(0, 1fr);
+        gap: 1.25rem;
+        align-items: center;
+        min-height: 7.5rem;
+        padding: 1.25rem 0;
+        border: 0;
+        border-bottom: var(--line) solid var(--steel);
+      }
+
+      .stage::before {
+        top: 0;
+        right: auto;
+        bottom: 0;
+        left: 1.15rem;
+        width: 1px;
+        height: auto;
+      }
+
+      .stage::after {
+        top: 50%;
+        left: .76rem;
+        transform: translateY(-50%);
+      }
+
+      .stage__number,
+      .stage h3,
+      .stage p { margin: 0; }
+
+      .acquisition__grid { grid-template-columns: 1fr; }
+      .acquisition__panel { width: min(100%, 34rem); }
+    }
+
+    @media (max-width: 43rem) {
+      .site-header__inner { min-height: 5rem; }
+      .header-action { font-size: 0; }
+      .header-action::after { content: "Acquire"; font-size: .72rem; }
+
+      .hero { padding-top: 5rem; }
+      .hero__inner { padding-top: 3rem; }
+      h1 { font-size: clamp(2.9rem, 14vw, 4.45rem); }
+
+      .phase-labels li {
+        overflow: hidden;
+        padding-left: .35rem;
+        font-size: .52rem;
+        letter-spacing: .04em;
+      }
+
+      .definition { padding-block: 1.5rem 2.25rem; }
+
+      .section { padding-block: 5.25rem; }
+      .section-head { margin-bottom: 3rem; }
+      .section-head h2 { font-size: clamp(2.55rem, 12vw, 4.1rem); }
+
+      .world {
+        grid-template-columns: 2.5rem 1fr;
+        gap: .25rem 1rem;
+        min-height: auto;
+        padding-block: 1.65rem;
+      }
+
+      .world:hover,
+      .world:focus-within { padding-inline: .65rem; }
+
+      .world h3 { font-size: 1.8rem; }
+      .world p { grid-column: 2; padding-top: .55rem; }
+
+      .stage,
+      .stage:last-child {
+        grid-template-columns: 2.5rem 6.5rem minmax(0,1fr);
+        gap: .75rem;
+      }
+
+      .stage p { font-size: .82rem; }
+      .acquisition h2 { font-size: clamp(3.3rem, 15vw, 5.1rem); }
+
+      .site-footer {
+        flex-direction: column;
+        gap: .45rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+      }
+      .js [data-reveal] { opacity: 1; transform: none; }
+    }
+  </style>
+
+  <script>document.documentElement.classList.replace('no-js', 'js');</script>
 </head>
 <body>
-<div class="wrap">
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <p class="mark"><b>Energydocks.com</b></p>
+  <header class="site-header" aria-label="Site header">
+    <div class="shell site-header__inner">
+      <a class="wordmark" href="#top" aria-label="EnergyDocks.com home">EnergyDocks<span>.com</span></a>
+      <a class="header-action" href="#acquisition">Available for acquisition</a>
+    </div>
+  </header>
 
-  <h1>The point where a moving system stops to take on energy.</h1>
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="shell hero__inner">
+        <div class="hero__copy" data-reveal>
+          <h1 id="hero-title">The point where a moving system stops to take on energy.</h1>
+          <p class="hero__lede">
+            Ships at berth. Robots returning to base. Fleet assets entering a depot cycle.
+            <strong>The equipment differs. The operating logic repeats.</strong>
+          </p>
+        </div>
 
-  <p class="lede">
-    Ships at berth, robots returning to base, trucks and yard equipment on a
-    depot cycle. Each one approaches, connects, draws or exchanges power,
-    identifies itself, and leaves again. The equipment differs. The sequence
-    does not.
-  </p>
+        <div class="hero__visual" data-reveal>
+          <ol class="phase-labels" aria-hidden="true">
+            <li>Approach</li>
+            <li>Connect</li>
+            <li>Identify</li>
+            <li>Transfer</li>
+            <li>Return</li>
+          </ol>
 
-  <svg class="berth" viewBox="0 0 640 210" role="img"
-       aria-label="Three units at a quay: one approaching, one connecting, one receiving energy.">
-    <!-- quay -->
-    <line class="quay" x1="20" y1="150" x2="620" y2="150"/>
+          <figure class="dock-figure">
+            <svg viewBox="0 0 820 480" role="img" aria-labelledby="dock-title dock-desc">
+              <title id="dock-title">A moving unit connecting to an energy dock</title>
+              <desc id="dock-desc">Five positions show a mobile system approaching, connecting, identifying, transferring energy, and returning to operation.</desc>
 
-    <!-- unit 1: approaching, no link -->
-    <rect class="hull" x="52" y="52" width="104" height="40" rx="3"/>
-    <text class="cap" x="52" y="182">approach</text>
+              <g class="datum">
+                <path d="M42 64H780M42 146H780M42 228H780M42 310H780M42 392H780"/>
+                <path d="M106 32V430M258 32V430M410 32V430M562 32V430M714 32V430"/>
+              </g>
 
-    <!-- unit 2: connecting, partial link -->
-    <rect class="hull" x="268" y="52" width="104" height="40" rx="3"/>
-    <line class="stem" x1="320" y1="92" x2="320" y2="124"/>
-    <text class="cap" x="268" y="182">connect</text>
+              <path class="schematic-line schematic-faint" d="M40 264H780"/>
+              <path class="schematic-line schematic-mid" d="M70 264H588" stroke-dasharray="4 10"/>
 
-    <!-- unit 3: connected, energy flowing -->
-    <rect class="hull hull-live" x="484" y="52" width="104" height="40" rx="3"/>
-    <line class="stem-live" x1="536" y1="92" x2="536" y2="150"/>
-    <line class="flow" x1="536" y1="148" x2="536" y2="94"/>
-    <circle cx="536" cy="150" r="5" fill="#E0A03C"/>
-    <text class="cap" x="484" y="182">transfer</text>
-  </svg>
+              <!-- approach unit -->
+              <g class="schematic-line schematic-faint" transform="translate(58 208)">
+                <path d="M18 0h74l17 15v82l-17 15H18L0 94V18Z"/>
+                <path d="M18 20h55l14 12v48L73 92H18M10 56h77M29 20v72M72 20v72"/>
+                <circle cx="49" cy="56" r="7"/>
+              </g>
 
-  <section>
-    <h2>Where this happens</h2>
-    <ul class="sectors">
-      <li>
-        <span class="name">Marine</span>
-        <span class="desc">Shore connection at berth, port electrification, autonomous surface and subsea vessels returning to a docking point.</span>
-      </li>
-      <li>
-        <span class="name">Robotic</span>
-        <span class="desc">Drones, warehouse and field robots that dock, charge and resume a task without a person in the loop.</span>
-      </li>
-      <li>
-        <span class="name">Fleet</span>
-        <span class="desc">Depot and on-route charging for buses, heavy trucks, port vehicles and yard equipment, increasingly through automated connection rather than a handheld plug.</span>
-      </li>
-    </ul>
-  </section>
+              <!-- connect unit -->
+              <g class="schematic-line schematic-mid" transform="translate(211 208)">
+                <path d="M18 0h74l17 15v82l-17 15H18L0 94V18Z"/>
+                <path d="M18 20h55l14 12v48L73 92H18M10 56h77M29 20v72M72 20v72"/>
+                <circle cx="49" cy="56" r="7"/>
+                <path d="M109 47h29v18h-29"/>
+              </g>
 
-  <section>
-    <h2>About the name</h2>
-    <p>
-      Energydocks.com is a plural, sector-neutral name for this moment of
-      connection. It is held as a strategic domain and is not affiliated with
-      any existing product or company using a similar term.
-    </p>
-  </section>
+              <!-- identify unit and targeting corners -->
+              <g class="schematic-line" transform="translate(363 208)">
+                <path d="M18 0h74l17 15v82l-17 15H18L0 94V18Z"/>
+                <path d="M18 20h55l14 12v48L73 92H18M10 56h77M29 20v72M72 20v72"/>
+                <circle cx="49" cy="56" r="7"/>
+                <path d="M109 47h29v18h-29"/>
+              </g>
+              <g class="target-corner">
+                <path d="M350 196v-14h14M484 182h14v14M350 332v14h14M498 332v14h-14"/>
+              </g>
 
-  <div class="close">
-    <p>Enquiries regarding acquisition or partnership:</p>
-    <p class="contact"><a href="mailto:agent@sohadot.com">agent@sohadot.com</a></p>
-  </div>
+              <!-- fixed dock -->
+              <g class="schematic-line" transform="translate(516 107)">
+                <rect x="0" y="0" width="92" height="314"/>
+                <path d="M16 18h60v64H16zM16 232h60v64H16zM30 32h32M30 46h32M30 60h32M30 246h32M30 260h32M30 274h32"/>
+                <path d="M0 127h-30v80H0M92 127h24v80H92"/>
+                <circle cx="46" cy="157" r="18"/>
+                <path d="M46 139v36M28 157h36"/>
+              </g>
 
-  <footer>Energydocks.com — a Sohadot asset.</footer>
+              <!-- transfer unit -->
+              <g class="schematic-line" transform="translate(608 208)">
+                <path d="M18 0h74l17 15v82l-17 15H18L0 94V18Z"/>
+                <path d="M18 20h55l14 12v48L73 92H18M10 56h77M29 20v72M72 20v72"/>
+                <circle cx="49" cy="56" r="7"/>
+              </g>
 
-</div>
+              <path class="energy-path" d="M562 420V264H720"/>
+              <path class="energy-pulse" d="M562 420V264H760"/>
+              <circle cx="562" cy="420" r="5" fill="#e4a13b"/>
+              <circle cx="562" cy="264" r="6" fill="#e4a13b"/>
+
+              <path class="schematic-line schematic-mid" d="M747 247l17 17-17 17"/>
+            </svg>
+            <figcaption>
+              <span>Mobile asset</span>
+              <span>Energy interface active</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="shell definition" data-reveal>
+        <div class="definition__label">Working definition</div>
+        <p>
+          An <strong>energy dock</strong> is the physical and digital interface through which a mobile
+          system connects to an energy source, establishes identity, transfers power and returns to operation.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="worlds-title">
+      <div class="shell">
+        <div class="section-head" data-reveal>
+          <div class="section-index">01 / Contexts</div>
+          <div>
+            <h2 id="worlds-title">One sequence. Three operating worlds.</h2>
+            <p class="section-head__intro">Different machines arrive with different requirements. Each still needs a governed point of connection between mobility and energy.</p>
+          </div>
+        </div>
+
+        <ol class="worlds">
+          <li class="world" data-reveal>
+            <span class="world__number">01</span>
+            <h3>Marine</h3>
+            <p>Shore connection, port electrification, and autonomous surface or subsea systems returning to a docking point.</p>
+            <span class="world__signal" aria-hidden="true"></span>
+          </li>
+          <li class="world" data-reveal>
+            <span class="world__number">02</span>
+            <h3>Robotic</h3>
+            <p>Drones and field or warehouse robots that dock, charge and resume work without a person in the loop.</p>
+            <span class="world__signal" aria-hidden="true"></span>
+          </li>
+          <li class="world" data-reveal>
+            <span class="world__number">03</span>
+            <h3>Fleet</h3>
+            <p>Depot and on-route energy interfaces for buses, heavy trucks, port vehicles and yard equipment.</p>
+            <span class="world__signal" aria-hidden="true"></span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section sequence-section" aria-labelledby="sequence-title">
+      <div class="shell">
+        <div class="section-head" data-reveal>
+          <div class="section-index">02 / Logic</div>
+          <div>
+            <h2 id="sequence-title">The operating sequence.</h2>
+            <p class="section-head__intro">The dock is more than the plug. It coordinates arrival, connection, identity, controlled transfer and release.</p>
+          </div>
+        </div>
+
+        <ol class="sequence" data-reveal>
+          <li class="stage">
+            <span class="stage__number">01</span>
+            <h3>Approach</h3>
+            <p>Locate the interface, enter its operating envelope and align.</p>
+          </li>
+          <li class="stage">
+            <span class="stage__number">02</span>
+            <h3>Connect</h3>
+            <p>Establish the physical, inductive or automated link.</p>
+          </li>
+          <li class="stage">
+            <span class="stage__number">03</span>
+            <h3>Identify</h3>
+            <p>Recognize the asset, session, permissions and demand.</p>
+          </li>
+          <li class="stage stage--live">
+            <span class="stage__number">04</span>
+            <h3>Transfer</h3>
+            <p>Control the flow of energy, measurement and safety state.</p>
+          </li>
+          <li class="stage">
+            <span class="stage__number">05</span>
+            <h3>Return</h3>
+            <p>Release the connection and return the system to service.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="acquisition" id="acquisition" aria-labelledby="acquisition-title">
+      <div class="shell acquisition__grid">
+        <div data-reveal>
+          <div class="section-index">03 / The name</div>
+          <h2 id="acquisition-title">A name for the infrastructure layer.</h2>
+          <p class="acquisition__thesis">
+            EnergyDocks.com names the shared connection layer across marine, robotic and fleet systems—the point where mobility becomes energy infrastructure. Its plural form can hold a network of sites, a product family or a category, not merely a single charging device.
+          </p>
+        </div>
+
+        <aside class="acquisition__panel" aria-label="Acquisition enquiry" data-reveal>
+          <div class="acquisition__status">Available for acquisition</div>
+          <h3>Acquire the category-capable .com.</h3>
+          <p>Direct enquiries from infrastructure builders, strategic operators and their representatives are welcome.</p>
+          <a class="cta" href="mailto:agent@sohadot.com?subject=EnergyDocks.com%20acquisition%20enquiry">
+            <span>Discuss acquisition</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 19 19 5M8 5h11v11" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="square" stroke-linejoin="miter"/>
+            </svg>
+          </a>
+          <a class="direct-email" href="mailto:agent@sohadot.com?subject=EnergyDocks.com%20acquisition%20enquiry">agent@sohadot.com</a>
+        </aside>
+      </div>
+
+      <footer class="shell site-footer">
+        <p>EnergyDocks.com — a Sohadot asset.</p>
+        <p>Conceptual category surface · No operating product represented.</p>
+      </footer>
+    </section>
+  </main>
+
+  <script>
+    (() => {
+      const items = document.querySelectorAll('[data-reveal]');
+      if (!('IntersectionObserver' in window)) {
+        items.forEach((item) => item.classList.add('is-visible'));
+        return;
+      }
+
+      const observer = new IntersectionObserver((entries, currentObserver) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add('is-visible');
+          currentObserver.unobserve(entry.target);
+        });
+      }, { threshold: 0.13, rootMargin: '0px 0px -5% 0px' });
+
+      items.forEach((item) => observer.observe(item));
+    })();
+  </script>
 </body>
 </html>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#071b1d"/>
+  <g stroke="#365356" fill="none">
+    <path d="M60 74h1080M60 542h1080"/>
+    <path d="M710 74v468M820 74v468M930 74v468M1040 74v468" opacity=".45"/>
+  </g>
+  <text x="60" y="125" fill="#e9f0ec" font-family="Arial,Helvetica,sans-serif" font-size="34" font-weight="700">EnergyDocks<tspan fill="#8ca19d">.com</tspan></text>
+  <text x="60" y="248" fill="#e9f0ec" font-family="Arial,Helvetica,sans-serif" font-size="64" font-weight="500" letter-spacing="-3">The point where a moving</text>
+  <text x="60" y="320" fill="#e9f0ec" font-family="Arial,Helvetica,sans-serif" font-size="64" font-weight="500" letter-spacing="-3">system takes on energy.</text>
+  <text x="60" y="390" fill="#8ca19d" font-family="Arial,Helvetica,sans-serif" font-size="23">Marine · Robotic · Fleet</text>
+  <g transform="translate(720 213)" stroke="#8ca19d" fill="none" stroke-width="2">
+    <path d="M18 0h116l22 20v112l-22 20H18L0 130V22Z"/>
+    <path d="M25 31h76l21 19v54l-21 18H25M15 76h106M47 31v91M99 31v91" opacity=".7"/>
+    <circle cx="72" cy="76" r="10"/>
+    <path d="M156 65h46v22h-46"/>
+  </g>
+  <g transform="translate(922 146)" stroke="#8ca19d" fill="none" stroke-width="2">
+    <rect width="112" height="288"/>
+    <path d="M18 20h76v62H18zM18 206h76v62H18zM0 110h-42v68H0"/>
+    <circle cx="56" cy="144" r="19"/>
+    <path d="M56 125v38M37 144h38"/>
+  </g>
+  <path d="M922 290H792" stroke="#e4a13b" stroke-width="3"/>
+  <path d="M922 290H792" stroke="#f0c16f" stroke-width="6" stroke-dasharray="3 15"/>
+  <circle cx="922" cy="290" r="7" fill="#e4a13b"/>
+  <text x="60" y="509" fill="#f0c16f" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="700" letter-spacing="2">AVAILABLE FOR ACQUISITION</text>
+</svg>
