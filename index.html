@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Energydocks.com — where mobile systems connect to energy</title>
+<meta name="description" content="Energydocks.com. The interface where ships, fleets and autonomous machines connect to energy, transfer it, and return to service. Domain available for acquisition.">
+<link rel="canonical" href="https://energydocks.com/">
+<meta property="og:title" content="Energydocks.com">
+<meta property="og:description" content="The interface where ships, fleets and autonomous machines connect to energy, transfer it, and return to service.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://energydocks.com/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Energydocks.com",
+  "url": "https://energydocks.com/",
+  "description": "The interface where ships, fleets and autonomous machines connect to energy, transfer it, and return to service.",
+  "publisher": { "@type": "Organization", "name": "Sohadot", "email": "agent@sohadot.com" }
+}
+</script>
+<style>
+  :root{
+    --deep:#0D2426;
+    --deep-2:#12302F;
+    --pale:#E8EFEC;
+    --muted:#93A9A6;
+    --steel:#2F4B4C;
+    --amber:#E0A03C;
+    --measure:34rem;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    background:var(--deep);
+    color:var(--pale);
+    font-family:"Archivo","Helvetica Neue",Arial,sans-serif;
+    font-size:17px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{
+    max-width:60rem;
+    margin:0 auto;
+    padding:clamp(2rem,7vw,5rem) clamp(1.25rem,5vw,3.5rem) 3rem;
+  }
+  .mark{
+    font-size:.95rem;
+    font-weight:600;
+    letter-spacing:.01em;
+    color:var(--muted);
+    margin:0 0 clamp(3rem,10vw,6rem);
+  }
+  .mark b{color:var(--pale);font-weight:600}
+
+  h1{
+    font-size:clamp(2.1rem,7vw,4.1rem);
+    font-weight:700;
+    line-height:1.04;
+    letter-spacing:-.025em;
+    margin:0;
+    max-width:20ch;
+  }
+  .lede{
+    margin:1.75rem 0 0;
+    max-width:var(--measure);
+    font-size:clamp(1.05rem,2.4vw,1.2rem);
+    color:#C7D6D2;
+  }
+
+  /* berth diagram */
+  .berth{
+    margin:clamp(3rem,9vw,5.5rem) 0 0;
+    width:100%;
+    height:auto;
+    max-width:44rem;
+    display:block;
+  }
+  .quay{stroke:var(--steel);stroke-width:2}
+  .hull{fill:none;stroke:var(--muted);stroke-width:2;rx:3}
+  .hull-live{stroke:var(--pale)}
+  .stem{stroke:var(--steel);stroke-width:2}
+  .stem-live{stroke:var(--amber);stroke-width:3}
+  .flow{
+    stroke:var(--amber);stroke-width:3;
+    stroke-dasharray:6 14;
+    animation:pulse 2.4s linear infinite;
+  }
+  @keyframes pulse{to{stroke-dashoffset:-40}}
+  @media (prefers-reduced-motion:reduce){.flow{animation:none}}
+  .cap{fill:var(--muted);font-size:11px;font-family:inherit;letter-spacing:.02em}
+
+  section{margin-top:clamp(3.5rem,10vw,6rem)}
+  h2{
+    font-size:1.05rem;
+    font-weight:600;
+    margin:0 0 1.5rem;
+    color:var(--muted);
+  }
+  p{max-width:var(--measure)}
+
+  .sectors{list-style:none;margin:0;padding:0}
+  .sectors li{
+    padding:1.15rem 0;
+    border-top:1px solid var(--steel);
+    display:grid;
+    grid-template-columns:9.5rem 1fr;
+    gap:.35rem 1.5rem;
+    align-items:baseline;
+  }
+  .sectors li:last-child{border-bottom:1px solid var(--steel)}
+  .sectors dt,.sectors .name{font-weight:600}
+  .sectors .desc{color:var(--muted);max-width:38ch}
+  @media (max-width:34rem){
+    .sectors li{grid-template-columns:1fr}
+  }
+
+  .close{
+    margin-top:clamp(3.5rem,10vw,6rem);
+    padding-top:2rem;
+    border-top:1px solid var(--steel);
+  }
+  .close p{color:var(--muted)}
+  a{color:var(--amber);text-decoration:none;border-bottom:1px solid rgba(224,160,60,.4);padding-bottom:1px}
+  a:hover{border-bottom-color:var(--amber)}
+  a:focus-visible{outline:2px solid var(--amber);outline-offset:3px;border-radius:2px}
+  .contact{margin-top:.75rem;font-size:1.15rem;font-weight:500;color:var(--pale)}
+  footer{margin-top:3rem;font-size:.85rem;color:#6E8482}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <p class="mark"><b>Energydocks.com</b></p>
+
+  <h1>The point where a moving system stops to take on energy.</h1>
+
+  <p class="lede">
+    Ships at berth, robots returning to base, trucks and yard equipment on a
+    depot cycle. Each one approaches, connects, draws or exchanges power,
+    identifies itself, and leaves again. The equipment differs. The sequence
+    does not.
+  </p>
+
+  <svg class="berth" viewBox="0 0 640 210" role="img"
+       aria-label="Three units at a quay: one approaching, one connecting, one receiving energy.">
+    <!-- quay -->
+    <line class="quay" x1="20" y1="150" x2="620" y2="150"/>
+
+    <!-- unit 1: approaching, no link -->
+    <rect class="hull" x="52" y="52" width="104" height="40" rx="3"/>
+    <text class="cap" x="52" y="182">approach</text>
+
+    <!-- unit 2: connecting, partial link -->
+    <rect class="hull" x="268" y="52" width="104" height="40" rx="3"/>
+    <line class="stem" x1="320" y1="92" x2="320" y2="124"/>
+    <text class="cap" x="268" y="182">connect</text>
+
+    <!-- unit 3: connected, energy flowing -->
+    <rect class="hull hull-live" x="484" y="52" width="104" height="40" rx="3"/>
+    <line class="stem-live" x1="536" y1="92" x2="536" y2="150"/>
+    <line class="flow" x1="536" y1="148" x2="536" y2="94"/>
+    <circle cx="536" cy="150" r="5" fill="#E0A03C"/>
+    <text class="cap" x="484" y="182">transfer</text>
+  </svg>
+
+  <section>
+    <h2>Where this happens</h2>
+    <ul class="sectors">
+      <li>
+        <span class="name">Marine</span>
+        <span class="desc">Shore connection at berth, port electrification, autonomous surface and subsea vessels returning to a docking point.</span>
+      </li>
+      <li>
+        <span class="name">Robotic</span>
+        <span class="desc">Drones, warehouse and field robots that dock, charge and resume a task without a person in the loop.</span>
+      </li>
+      <li>
+        <span class="name">Fleet</span>
+        <span class="desc">Depot and on-route charging for buses, heavy trucks, port vehicles and yard equipment, increasingly through automated connection rather than a handheld plug.</span>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>About the name</h2>
+    <p>
+      Energydocks.com is a plural, sector-neutral name for this moment of
+      connection. It is held as a strategic domain and is not affiliated with
+      any existing product or company using a similar term.
+    </p>
+  </section>
+
+  <div class="close">
+    <p>Enquiries regarding acquisition or partnership:</p>
+    <p class="contact"><a href="mailto:agent@sohadot.com">agent@sohadot.com</a></p>
+  </div>
+
+  <footer>Energydocks.com — a Sohadot asset.</footer>
+
+</div>
+</body>
+</html>
